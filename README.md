@@ -1,2 +1,3 @@
 # trampham.net
-Code for trampham.net
+
+This repository stores code for trampham.net
