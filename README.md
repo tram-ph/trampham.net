@@ -1,6 +1,6 @@
 # trampham.net
 
-This repository stores code for trampham.net
+This repo stores code for https://trampham.net
 
 # Projects
 
