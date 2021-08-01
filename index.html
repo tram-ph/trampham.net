@@ -5,37 +5,63 @@
     <title>This is my page</title>
     <style>
         h1 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Helvetica;
             font-weight: normal;
+            font-size: 30px;
+            color: #333;
         }
 
         h2 {
 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #bbb;
-            font-weight: normal;
+            font-family: Helvetica, sans-serif;
+            font-size: 20px;
+            color: #666;
+            font-weight: lighter;
+            letter-spacing: 3px;
         }
 
         body {
             margin-top: 100px;
-            
+
         }
 
         #footer {
-            background-color: black;
-            width: 100%;
-            height: 50px;
-
-        }
-
-        #bigDiv{
-            width: 80%;
-            text-align: center;
+            background-color: #404040;
+            width: 920px;
+            height: 30px;
             margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 10px;
+
         }
+
+        #bigDiv {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
         span {
             color: white;
-            padding: 15px;
+            font-family: Helvetica, sans-serif;
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 1200px;
+            width: 900px;
+            margin: 0 auto;
+
+        }
+
+        .gallery img {
+            width: 33%;
+            margin-bottom: 3px;
         }
     </style>
 </head>
@@ -43,15 +69,28 @@
 <body>
 
     <div id="bigDiv">
-        <h1>Tram Pham</h1>
+        <h1>TRAM PHAM</h1>
 
-        <h2>Graphic Design Portfolio</h2>
+        <h2>WEB DEVELOPER PORTFOLIO</h2>
 
-        <img src="image1.jpg" width="200" height="200" />
-        <img src="image1.jpg" width="200" height="200" />
-        <img src="image1.jpg" width="200" height="200" /><br />
-        <img src="image1.jpg" width="200" height="200" />
+        <div class="gallery">
 
+            <img width="200" src="image1.jpg">
+            <img width="200" src="image2.jpg">
+            <img width="200"
+                src="https://images.unsplash.com/photo-1627794463790-3d17ee099a35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
+            <img width="200"
+                src="https://images.unsplash.com/photo-1627788116192-461ebc6ab954?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+            <img width="200"
+                src="https://images.unsplash.com/photo-1627772329965-8ec1de188eeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+            <img width="200"
+                src="https://images.unsplash.com/photo-1627767432758-7a1db21ab302?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
+            <img width="200"
+                src="https://images.unsplash.com/photo-1627770839576-247ec2feeec4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1616&q=80">
+            <img width="200"
+                src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80">
+
+        </div>
         <div id="footer">
 
             <span>Portfolio</span>
