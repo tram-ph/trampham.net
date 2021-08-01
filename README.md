@@ -7,7 +7,7 @@ This repo contains code for https://trampham.net and website templates.
 Below are some sample HTML/CSS templates
 ### Travel site template
 
-Template for a fictional travel agency. Using HTML/ CSS and anime.js for animations
+Template for a fictional travel agency. Using HTML/ CSS and **anime.js** for animations. Demo here: https://trampham.net/travel-template
 
 <img width="800" alt="travel-site" src="https://user-images.githubusercontent.com/88192771/127772989-55884e59-6000-4b9c-a3fe-e1d61601a310.PNG">
 
