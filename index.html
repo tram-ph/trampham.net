@@ -27,11 +27,12 @@
 
         #footer {
             background-color: #404040;
-            width: 920px;
+            width: 900px;
             height: 30px;
             margin: 0 auto;
             margin-top: 30px;
             padding-top: 10px;
+
 
         }
 
@@ -63,6 +64,22 @@
             width: 33%;
             margin-bottom: 3px;
         }
+
+        a {
+            color: white;
+            font-family: Helvetica, sans-serif;
+            text-decoration: none;
+            padding: 20px;
+
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: #cc9900;
+        }
     </style>
 </head>
 
@@ -75,8 +92,8 @@
 
         <div class="gallery">
 
-            <img width="200" src="image1.jpg">
-            <img width="200" src="https://images.unsplash.com/photo-1627740313441-40549b2a21b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80">
+            <img src="/images/image1.jpg" />
+            <img width="200" src="/images/image2.jpg">
             <img width="200"
                 src="https://images.unsplash.com/photo-1627794463790-3d17ee099a35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
             <img width="200"
@@ -94,9 +111,9 @@
         <div id="footer">
 
             <span>Portfolio</span>
-            <span>About</span>
-            <span>Contact</span>
-            <span>Blog</span>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
 
         </div>
     </div>
