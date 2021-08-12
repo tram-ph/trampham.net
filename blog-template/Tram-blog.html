@@ -23,24 +23,22 @@
             font-family: Gill Sans;
             font-weight: lighter;
             font-size: 3.5rem;
-            color: #262626;
-            margin: 0.1rem;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
+            color: #404040;
+            margin: -0.5rem;
         }
 
         h4 {
             font-family: Gill Sans;
             font-weight: lighter;
             font-size: 2.5rem;
-            color: #262626;
+            color: #404040;
         }
 
-        h5{
+        h5 {
             font-family: Helvetica;
             font-weight: lighter;
             font-size: 2.3rem;
-            color: #262626;
+            color: #404040;
             text-align: center;
             font-style: italic;
             padding-right: 4rem;
@@ -60,7 +58,6 @@
             width: 80%;
             margin: 0 auto;
             flex-direction: column;
-            border: 1px solid blue;
         }
 
         #blogDiv {
@@ -74,16 +71,14 @@
         .contentBox {
             display: flex;
             padding-bottom: 2rem;
-            border: 1px solid red;
         }
 
-        .contentHeading{
+        .contentHeading {
             flex-basis: 7rem;
             flex-grow: 0;
             flex-shrink: 0;
             height: 20rem;
             position: relative;
-            border: 1px solid green;
         }
 
         #aboutmeContainer {
@@ -94,7 +89,7 @@
             padding-left: 2.5rem;
         }
 
-        .content{
+        .content {
             padding-left: 5rem;
         }
 
@@ -114,23 +109,29 @@
             color: #999;
             word-spacing: 0.5rem;
         }
-        
-        #footer{
+
+        #footer {
             height: 2rem;
             width: 100%;
             padding-bottom: 2rem;
             margin: 0 auto;
             text-align: center;
         }
-        
+
+        .contentHeading h3 {
+            transform: rotate(-90deg) translateX(-100%);
+            width: 15rem;
+            position: absolute;
+            transform-origin: top left;
+        }
     </style>
 </head>
 
 <body>
     <div id="homeDiv">
-        <h1><a href='https://trampham.net'>PORTFOLIO</a></h1>
-        <h1><a href='https://trampham.net'>RESUME</a></h1>
-        <h1><a href='https://trampham.net'>CONTACT</a></h1>
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net'>_CONTACT</a></h1>
     </div>
     <div id="line">
     </div>
@@ -145,7 +146,7 @@
             </div>
 
         </div>
-        
+
         <div class='contentBox'>
             <div class="contentHeading">
                 <h3>About Me</h3>
@@ -159,18 +160,20 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie magna aliquet ex lacinia,
                     imperdiet tincidunt sapien facilisis. Quisque fringilla porttitor augue eget suscipit.
                 </p>
-                <p>Sed ultricies sapien hendrerit purus sagittis, ac euismod neque lacinia. Integer ac mi quam.Vestibulum eget scelerisque dolor. In quis feugiat tellus. Integer rutrum quis eros ut fringilla.Donec dignissim massa metus, a luctus metus commodo ut.
+                <p>Sed ultricies sapien hendrerit purus sagittis, ac euismod neque lacinia. Integer ac mi
+                    quam.Vestibulum eget scelerisque dolor. In quis feugiat tellus. Integer rutrum quis eros ut
+                    fringilla.Donec dignissim massa metus, a luctus metus commodo ut.
                 </p>
 
             </div>
 
         </div>
-        
+
         <div class='contentBox'>
             <div class="contentHeading">
             </div>
-            
-            <div class ="content">
+
+            <div class="content">
                 <h5>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie magna aliquet ex lacinia,
                     imperdiet tincidunt sapien facilisis. Quisque fringilla porttitor augue eget suscipit.'
                 </h5>
