@@ -20,16 +20,6 @@
             text-align: center;
         }
 
-        h3 {
-            font-family: Times New Roman, serif;
-            font-size: 5rem;
-            font-weight: lighter;
-            color: #222;
-            text-align: center;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
         p {
             font-family: Didot;
             font-size: 5rem;
@@ -38,7 +28,6 @@
             text-align: center;
             margin: 0 auto;
             padding: 2rem;
-
         }
 
         #homeDiv a {
@@ -82,6 +71,12 @@
 
         #ThankYou {
             justify-content: center;
+            border: 1px solid red;
+        }
+
+        #CamOn {
+            display: flex;
+            justify-content: center;
         }
 
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -90,8 +85,12 @@
                 justify-content: space-evenly;
             }
 
-            #bodyDiv {
-                width: 100%;
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -116,7 +115,9 @@
         </div>
         <div id="ThankYou">
             <p>Thank you!</p>
-            <h3>Cám Ơn!</h3>
+            <div id="CamOn">
+                <img src="/images/Cam-on.png" alt="">
+            </div>
         </div>
 
     </div>
