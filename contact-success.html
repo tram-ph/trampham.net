@@ -1,1 +1,131 @@
-Success
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tram's Contact Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <style>
+        h1 {
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 1rem;
+            color: grey;
+            padding: 0.8rem;
+        }
+
+        h2 {
+            font-family: Helvetica;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #222;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: Playfair Display, serif;
+            font-size: 5rem;
+            font-weight: normal;
+            color: #222;
+            text-align: center;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        p {
+            font-family: didot;
+            font-size: 5rem;
+            font-weight: lighter;
+            color: #222;
+            text-align: center;
+            margin: 0 auto;
+            padding: 2rem;
+
+        }
+
+        #homeDiv a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #homeDiv a:hover {
+            color: #cc9900;
+        }
+
+        #homeDiv {
+            display: flex;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        #bodyDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50rem;
+            margin: 0 auto;
+        }
+
+        #successBox {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 20%;
+        }
+
+        #plane {
+            margin: 0 auto;
+        }
+
+        #ThankYou {
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            #bodyDiv {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="homeDiv">
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+    </div>
+
+    <div id="bodyDiv">
+        <div id="successBox">
+            <div id="plane">
+                <img src="/images/plane.png" alt="">
+            </div>
+            <div>
+                <h2>Success</h2>
+            </div>
+        </div>
+        <div id="ThankYou">
+            <p>Thank you!</p>
+            <h3>Cám Ơn!</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
