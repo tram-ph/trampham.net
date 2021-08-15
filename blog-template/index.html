@@ -51,11 +51,12 @@
             margin: 0 auto;
             text-align: right;
             border-bottom: 1px solid #bfbfbf;
+
         }
 
         #bigDiv {
             display: flex;
-            width: 80%;
+            width: 80rem;
             margin: 0 auto;
             flex-direction: column;
         }
@@ -124,6 +125,48 @@
             position: absolute;
             transform-origin: top left;
         }
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            #bigDiv {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            img {
+                width: 80%;
+            }
+
+            .contentBox {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            h5 {
+                padding-right: 0rem;
+            }
+
+            .contentHeading {
+                flex-basis: 0rem;
+
+            }
+        }
     </style>
 </head>
 
@@ -131,7 +174,7 @@
     <div id="homeDiv">
         <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
         <h1><a href='https://trampham.net'>_RESUME</a></h1>
-        <h1><a href='https://trampham.net'>_CONTACT</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
     </div>
     <div id="line">
     </div>
@@ -158,11 +201,10 @@
             <div class="content">
                 <h4>THIS IS THE HEADING</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie magna aliquet ex lacinia,
-                    imperdiet tincidunt sapien facilisis. Quisque fringilla porttitor augue eget suscipit.
+                    imperdiet tincidunt sapien facilisis.
                 </p>
                 <p>Sed ultricies sapien hendrerit purus sagittis, ac euismod neque lacinia. Integer ac mi
-                    quam.Vestibulum eget scelerisque dolor. In quis feugiat tellus. Integer rutrum quis eros ut
-                    fringilla.Donec dignissim massa metus, a luctus metus commodo ut.
+                    quam.Vestibulum eget scelerisque dolor.
                 </p>
 
             </div>
@@ -170,9 +212,6 @@
         </div>
 
         <div class='contentBox'>
-            <div class="contentHeading">
-            </div>
-
             <div class="content">
                 <h5>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie magna aliquet ex lacinia,
                     imperdiet tincidunt sapien facilisis. Quisque fringilla porttitor augue eget suscipit.'
