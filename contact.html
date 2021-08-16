@@ -55,7 +55,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 1000px;
+            width: 63rem;
             margin: 0 auto;
         }
 
@@ -186,7 +186,6 @@
             width: 70px;
             float: left;
             padding-top: 8px;
-
         }
 
         .styleLabel {
@@ -198,6 +197,31 @@
             font-size: 1rem;
             color: #444;
             margin-top: 1rem;
+        }
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 5rem;
+            }
+
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+
+            .styleText {
+                font-size: 1.5rem;
+            }
+
         }
     </style>
 
@@ -267,8 +291,8 @@
                         <div class="styleLabel">
                             <label for="message">Message:</label><br>
                             <textarea id="Message" name="Message" rows="10" cols="42"></textarea><br>
-                        </div >
-                        <div><input type="submit" value="Send"/> </div>
+                        </div>
+                        <div><input type="submit" value="Send" /> </div>
                     </form>
 
                 </div>
