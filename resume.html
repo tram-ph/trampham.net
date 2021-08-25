@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            font-family: Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 1rem;
+            color: grey;
+            padding: 0.8rem;
+        }
+
+        h2 {
+            font-family: Didot;
+            font-weight: normal;
+            font-size: 2rem;
+            color: #222;
+        }
+
+        h3 {
+            font-family: Didot;
+            font-weight: normal;
+            font-size: 3rem;
+            color: #222;
+            padding-top: 2rem;
+        }
+
+        h4 {
+            font-family: Helvetica;
+            font-weight: lighter;
+            font-style: oblique;
+            font-size: 1.1rem;
+            color: #222;
+            text-align: center;
+        }
+
+        h5 {
+            font-family: Helvetica;
+            font-weight: lighter;
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            margin: 0;
+            padding: 2px;
+        }
+
+        h6 {
+            font-family: Helvetica;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #222;
+            text-align: center;
+            margin: 0;
+            padding: 2px;
+        }
+
+        li {
+            font-family: Helvetica;
+            font-weight: lighter;
+            text-align: left;
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        span {
+            font-family: Helvetica;
+            font-weight: lighter;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #222;
+        }
+
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #cc9900;
+        }
+
+        #homeDiv a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #homeDiv a:hover {
+            color: #cc9900;
+        }
+
+        #homeDiv {
+            display: flex;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        #bodyDiv {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #photoContainer {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 34rem;
+            margin: 0 auto;
+            background-color: #e6e6e6;
+        }
+
+        #containerLeft {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 50%;
+            justify-content: right;
+            transform: translateX(2rem);
+            z-index: 9;
+        }
+
+        #containerRight {
+            display: flex;
+            width: 50%;
+            transform: translateX(-2rem);
+        }
+
+        #photoContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-top: 10rem;
+            width: 25rem;
+            height: 15rem;
+            border: 1px solid white;
+        }
+
+        #photoContent h5 {
+            font-size: 1.3rem;
+            font-weight: lighter;
+            letter-spacing: 0.8rem;
+        }
+
+        #download {
+            background-color: #222;
+            border: none;
+            color: white;
+            padding: 0.8rem;
+            width: 10rem;
+            text-decoration: none;
+            margin: 1px 2px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+            margin-left: 7rem;
+            ;
+        }
+
+        #download:hover {
+            opacity: 0.5;
+        }
+
+        #download a {
+            font-family: Helvetica;
+            font-weight: lighter;
+            font-size: 1rem;
+            color: white;
+        }
+
+        #download a:hover {
+            cursor: pointer;
+        }
+
+        #photoBox {
+            display: flex;
+            margin-top: 6rem;
+            width: 25rem;
+            height: 22rem;
+        }
+
+        img {
+            width: 25rem;
+        }
+
+        .line {
+            width: 1px;
+            height: 5rem;
+            background-color: grey;
+            margin: 0 auto;
+        }
+
+        .infoBox {
+            width: 45rem;
+            justify-content: center;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .CVcaption {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border: 1px solid white;
+        }
+
+        .CVcontent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid white;
+            padding-bottom: 3rem;
+        }
+
+        #skillContent {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-right: 1rem;
+            padding-bottom: 3rem;
+        }
+
+        #footer {
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="homeDiv">
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+    </div>
+
+    <div id="bodyDiv">
+        <div id=photoContainer>
+            <div id="containerLeft">
+                <div id="photoContent">
+                    <div>
+                        <h3>TRAM PHAM</h3>
+                        <h5>WEB DEVELOPER</h5>
+                    </div>
+
+                    <div id="download">
+                        <a href="/file/Ms Tram Pham Resume.pdf" target="_blank">Download Resume</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="containerRight">
+                <div id="photoBox">
+                    <img src="/images/Tram-web.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="infoBox">
+            <div class="CVcaption">
+                <h2>About Me</h2>
+            </div>
+            <div class="CVcontent">
+                <h4>
+                    I am a recent IT graduate from Charles Sturt University (Graduate Certificate in Information
+                    Technology) and interested in web development and design.</br></br>
+
+                    Previously, I have 5 years’ experience as a web admin/ marketing officer with Pullman Hanoi hotel
+                    (AccorHotels Group) and 2 years’ experience as a web admin/ marketing officer/ graphic designer at a
+                    Trading, Wholesale company (Thai Duong Gia., JSC) in Vietnam. </br></br>
+
+                    I am straight-forward,
+                    collaborative, attentive to details and a problem solver. I have built and improved these skills
+                    throughout years of working because my jobs always involve in working with different departments and
+                    several projects at the same time.
+                </h4>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="infoBox">
+            <div class="CVcaption">
+                <h2>Skills</h2>
+            </div>
+            <div id="skillContent">
+                <div>
+                    <ul>
+                        <li>HTML, CSS, JavaScript, Responsive Design.</li>
+                        <li>Python. </li>
+                        <li>SQL, Database Design. </li>
+                        <li>UML, Object Modelling. </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Website administration. </li>
+                        <li>Adobe Suite - Photoshop, Illustrator. </li>
+                        <li>EDM (Electronic Direct Marketing). </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="infoBox">
+            <div class="CVcaption">
+                <h2>Work Experience</h2>
+            </div>
+            <div class="CVcontent">
+                </br></br>
+                <h5>2018 - Present </h5>
+                <h6>Digital Marketing and Communication Officer</h6>
+                <h5>Thai Duong Gia., JSC</h5></br>
+                <ul>
+                    <li>Web admin: managing the content and images of company’s website.</li>
+                    <li>Social media pages: managing, creating content and images for the company’s Facebook and
+                        Instagram. </li>
+                    <li>E-newsletter/ EDM: creating content and images, managing, database segments and sending). </li>
+                    <li>Marketing, Communication and Graphic Design: in charge of promotional programs and events to
+                        push sales.</li>
+                </ul>
+
+                </br></br>
+                <h5>Dec 2013 – July 2018</h5>
+                <h6>Assistant Marketing and Communication Manager</h6>
+                <h5>Pullman Hanoi Hotel (AccorHotels) </h5></br>
+                <ul>
+                    <li>Web admin: managing the hotel’s website (web content, images, video).</li>
+                    <li>Social media pages: managing, creating content and images for the company’s Facebook and
+                        Instagram.</li>
+                    <li>E-newsletter/ EDM: creating content and images, managing, database segments and sending). </li>
+                    <li>Graphic Design: design collaterals for promotional programs (digital and printing).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="infoBox">
+            <div class="CVcaption">
+                <h2>Education</h2>
+            </div>
+            <div class="CVcontent">
+                <ul>
+                    <li>2020 - 2021: Graduate Certificate in Information Technology – Charles Sturt University
+                        (Australia).</li>
+                    <li>2008 - 2009: Facility Management - Saxion University of Applied Science (The Netherlands).</li>
+                    <li>2004 - 2008: Bachelor Business Administration - Hanoi Open University (Vietnam).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="line"></div>
+        <div class="infoBox">
+            <div class="CVcaption">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="CVcontent">
+                <span> <a href="https://trampham.net/contact.html">Click here to get in touch!</a> </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <span>2021 by Tram Pham.</span>
+    </div>
+
+</body>
+
+</html>
