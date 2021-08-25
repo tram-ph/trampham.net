@@ -194,9 +194,26 @@
 
         textarea {
             font-family: Helvetica, sans-serif;
+            font-weight: normal;
             font-size: 1rem;
             color: #444;
             margin-top: 1rem;
+        }
+
+        #errorEmail {
+            display: none;
+            font-family: Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 0.8rem;
+            color: #990000;
+        }
+
+        #errorMes {
+            display: none;
+            font-family: Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 0.8rem;
+            color: #990000;
         }
 
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -230,8 +247,8 @@
 <body>
     <div id="homeDiv">
         <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
-        <h1><a href='https://trampham.net/resume.html'>_RESUME</a></h1>
-        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+        <h1><a href='https://trampham.net'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net'>_CONTACT</a></h1>
     </div>
     <div id="bodyDiv">
         <div id="getIntouch">
@@ -261,7 +278,7 @@
             </div>
 
             <div class="gitLink">
-                <a class="styleText" href="www.linkedin.com/in/tram-ph" target="_blank">
+                <a class="styleText" href="https://www.linkedin.com/in/tram-ph" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
                         <path
                             d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -275,24 +292,26 @@
             <div id="inputForm">
 
                 <div id="From">
-                    <form name="contact" netlify action="/contact-success">
+                    <form id="sendForm" name="contact" netlify action="/contact-success">
                         <h3>From:</h3>
                         <div class="styleLabel"><label for="name">Name:</label>
                             <input type="text" id="name" name="name" value="" /><br>
                         </div>
                         <div class="styleLabel">
-                            <label for="email">Email:</label>
-                            <input type="text" id="email" name="email" value="" /><br>
+                            <label for="email">Email*:</label>
+                            <input type="text" id="email" name="email" value="" /><br> <span id="errorEmail">Please
+                                enter a valid email.</span>
                         </div>
                         <div class="styleLabel">
                             <label for="subject">Subject:</label>
                             <input type="text" id="subject" name="subject" value="" /><br>
                         </div>
                         <div class="styleLabel">
-                            <label for="message">Message:</label><br>
-                            <textarea id="Message" name="Message" rows="10" cols="42"></textarea><br>
+                            <label for="message">Message*:</label><br>
+                            <textarea id="Message" name="Message" rows="10" cols="42"></textarea><br> <span
+                                id="errorMes">Message should not be empty.</span>
                         </div>
-                        <div><input type="submit" value="Send" /> </div>
+                        <div><input type="submit" value="Send" id="sendBtn" /> </div>
                     </form>
 
                 </div>
@@ -320,5 +339,35 @@
         </div>
 
 </body>
+<script>
+    var sendButton = document.getElementById('sendBtn');
+    sendButton.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var myEmail = document.getElementById('email');
+        var myEmailIsValid = false;
+        if (myEmail.value == "") {
+            document.getElementById('errorEmail').style.display = "block";
+            document.getElementById('errorEmail').innerHTML = "Email is required.";
+        } else if (myEmail.value.includes("@") == false) {
+            document.getElementById('errorEmail').style.display = "block";
+        } else {
+            myEmailIsValid = true;
+        }
+
+        var myMessage = document.getElementById('Message');
+        var myMessageIsValid = false;
+        if (myMessage.value == "") {
+            document.getElementById('errorMes').style.display = "block";
+        } else {
+            myMessageIsValid = true;
+        }
+
+        if (myMessageIsValid == true && myEmailIsValid == true) {
+            document.getElementById('sendForm').submit()
+        }
+        return;
+    });
+</script>
 
 </html>
