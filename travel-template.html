@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tram's Portfolio: Travel Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+        h1 {
+            font-family: Helvetica;
+            font-weight: lighter;
+            font-size: 1rem;
+            color: grey;
+            padding: 0.8rem;
+        }
+
+        h2 {
+            font-family: Montserrat;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            font-family: Montserrat;
+            font-size: 9vw;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            text-indent: -0.6rem;
+        }
+
+        h4 {
+            font-family: Montserrat;
+            font-size: 1.5rem;
+            font-weight: lighter;
+            margin: 0;
+            padding: 0;
+            line-height: 4rem;
+        }
+
+        h5 {
+            font-family: Montserrat;
+            font-size: 2.2rem;
+            font-weight: bolder;
+            margin: 0;
+            padding: 0;
+            line-height: 4rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        span {
+            font-family: Montserrat;
+            font-size: 1rem;
+            font-weight: lighter;
+            line-height: 1.5rem;
+        }
+
+        #homeDiv a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #homeDiv a:hover {
+            color: #cc9900;
+        }
+
+        #homeDiv {
+            display: flex;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        #bodyDiv {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+
+        #contentDiv {
+            width: 50%;
+            height: 100%;
+        }
+
+        #indentContent {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        #heading {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 100%;
+            height: 3rem;
+            align-items: center;
+            padding-top: 2rem;
+        }
+
+        #menuIcon:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        #menu {
+            width: 1.2rem;
+            height: 2px;
+            background-color: #222;
+            margin: 3px 0;
+        }
+
+        #numbers {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 16rem;
+            padding-left: 6rem;
+        }
+
+        #numbers h2 {
+            font-size: 0.8rem;
+            padding: 1rem;
+        }
+
+        #city {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        #buttonBox {
+            display: flex;
+            flex-direction: row;
+            padding-top: 8rem;
+        }
+
+        .button {
+            height: 2.8rem;
+            width: 2.8rem;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            margin-right: 0.3rem;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            border: 2px solid #222;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .up {
+            transform: rotate(-135deg) translateX(-1.4rem) translateY(0.2rem);
+        }
+
+        .down {
+            transform: rotate(45deg) translateX(1.4em) translateY(-0.2rem);
+        }
+
+        #line {
+            width: 6rem;
+            height: 0.2rem;
+            background-color: #222;
+        }
+
+        #photoDiv {
+            width: 50%;
+            background-size: cover;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1536663815808-535e2280d2c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #curtainMenu {
+            display: none;
+            width: 100%;
+            opacity: 0.9;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        #menuList {
+            width: 50%;
+            justify-content: right;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="homeDiv">
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net/resume.html'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+    </div>
+
+    <div id="bodyDiv">
+        <div id="contentDiv">
+            <div id="indentContent">
+                <div id="heading">
+                    <div id="travel">
+                        <h2>travel.</h2>
+                    </div>
+                    <div id="menuIcon">
+                        <div id="menu"></div>
+                        <div id="menu"></div>
+                        <div id="menu"></div>
+                    </div>
+                </div>
+
+                <div id="numbers">
+                    <h2 id="cityList">01</h2>
+                    <div id="line"></div>
+                    <h2>04</h2>
+                </div>
+
+                <div id="city">
+                    <h3 id="cityName">lisbon</h3>
+                </div>
+
+                <div id="content">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eaque nesciunt voluptate
+                        in,
+                        labore ipsam sed, quibusdam repellat fugit eius veniam eligendi illo vel deserunt accusamus odio
+                        maiores amet? Ea?</span>
+                </div>
+
+                <div id="buttonBox">
+                    <div id="btnLeft" class="button">
+                        <i class="arrow up"></i>
+                    </div>
+                    <div id="btnRight" class="button">
+                        <i class="arrow down"></i>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="photoDiv"></div>
+    </div>
+
+    <div id="curtainMenu">
+        <div id="menuList">
+            <h4><a id="closeMenu" href="#">X</a></h4>
+            <h5><a href="#">About us</a></h5>
+            <h5><a href="#">Tours</a></h5>
+            <h5><a href="#">Testimonials</a></h5>
+            <h5><a href="#">Book with us</a></h5>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    /* Click Menu Icon */
+    var openMenu = document.getElementById('menuIcon');
+    openMenu.addEventListener('click', function (event) {
+        event.preventDefault();
+        var open = document.getElementById('curtainMenu').style.display = "block";
+    });
+
+
+    /* Turn Off Menu Icon */
+    var closeMenu = document.getElementById('closeMenu');
+    closeMenu.addEventListener('click', function (event) {
+        event.preventDefault();
+        var close = document.getElementById('curtainMenu').style.display = "none";
+    });
+
+    /* List of cities images */
+    const cities = [
+        "https://images.unsplash.com/photo-1536663815808-535e2280d2c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1544885935-98dd03b09034?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "https://images.unsplash.com/photo-1549144511-f099e773c147?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "https://images.unsplash.com/photo-1592202178023-2dbb4527b006?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
+    ];
+
+    var cityIndex = 0;
+
+    /* Click Up Button*/
+    var buttonLeft = document.getElementById('btnLeft');
+    buttonLeft.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        cityIndex += 1;
+
+        if (cityIndex > 3) {
+            cityIndex = 0;
+        }
+
+        setHeading()
+
+        var clickBtnLeft = document.getElementById('photoDiv').style.backgroundImage = "url(" + cities[
+            cityIndex] + ")";
+
+    });
+
+    /* Click Down Button*/
+    var buttonRight = document.getElementById('btnRight');
+    buttonRight.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        cityIndex -= 1;
+
+        if (cityIndex < 0) {
+            cityIndex = 3;
+        }
+
+        setHeading()
+
+        var clickBtnRight = document.getElementById('photoDiv').style.backgroundImage = "url(" + cities[
+            cityIndex] + ")";
+
+    });
+
+
+    function setHeading() {
+        if (cityIndex == 0) {
+            document.getElementById("cityList").innerHTML = "01";
+            document.getElementById("cityName").innerHTML = "lisbon";
+        } else if (cityIndex == 1) {
+            document.getElementById("cityList").innerHTML = "02";
+            document.getElementById("cityName").innerHTML = "tokyo";
+        } else if (cityIndex == 2) {
+            document.getElementById("cityList").innerHTML = "03";
+            document.getElementById("cityName").innerHTML = "paris";
+        } else if (cityIndex == 3) {
+            document.getElementById("cityList").innerHTML = "04";
+            document.getElementById("cityName").innerHTML = "hanoi";
+        }
+    }
+</script>
+
+</html>
