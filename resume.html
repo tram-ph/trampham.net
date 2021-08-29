@@ -24,7 +24,7 @@
         h2 {
             font-family: Bodoni Moda;
             font-weight: normal;
-            font-size: 3rem;
+            font-size: 2.6rem;
             color: #222;
         }
 
@@ -179,8 +179,8 @@
         }
 
         #download a {
-            font-family: Helvetica;
-            font-weight: lighter;
+            font-family: Roboto;
+            font-weight: normal;
             font-size: 1rem;
             color: white;
         }
@@ -252,6 +252,59 @@
             margin: 0 auto;
             padding-top: 3rem;
             padding-bottom: 1rem;
+        }
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            #bodyDiv {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            h5 {
+                font-size: 1.5rem;
+            }
+
+            h6 {
+                font-size: 1.8rem;
+            }
+
+            #download a {
+                font-size: 1.5rem;
+            }
+
+            li {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            span {
+                font-size: 2rem;
+            }
+
+            #download {
+                padding: 0.8rem;
+                width: 15rem;
+                transform: translateY(3rem);
+                margin-left: 4.5rem;
+            }
+
+            .infoBox {
+                width: 90%;
+            }
+
         }
     </style>
 </head>
