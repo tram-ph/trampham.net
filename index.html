@@ -14,6 +14,11 @@
 
 
     <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
         h1 {
             font-family: Roboto;
             font-weight: normal;
@@ -25,7 +30,7 @@
         h2 {
             font-family: Bodoni Moda;
             font-weight: normal;
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #222;
         }
 
@@ -66,24 +71,6 @@
             bottom: 0;
         }
 
-        #footer a {
-            font-family: Roboto;
-            font-weight: normal;
-            font-size: 1rem;
-            color: white;
-            padding-right: 2rem;
-            margin: 0 auto;
-            text-decoration: none;
-        }
-
-        #footer a:visited {
-            color: white;
-        }
-
-        #footer a:hover {
-            color: #cc9900;
-        }
-
         #bigDiv {
             width: 80%;
             margin: 0 auto;
@@ -99,7 +86,7 @@
             color: white;
             font-family: Roboto;
             font-weight: normal;
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
         }
 
@@ -149,9 +136,10 @@
             width: 100%;
             padding-bottom: 1rem;
         }
-        
+
         .gitLink a {
             text-decoration: none;
+        }
 
         .gitLink a:hover {
             color: #222;
@@ -205,10 +193,6 @@
                 position: fixed;
             }
 
-            #footer a {
-                font-size: 2rem;
-            }
-
             svg {
                 width: 3rem;
                 height: 3rem;
@@ -216,6 +200,43 @@
 
             .styleText {
                 font-size: 1.5rem;
+            }
+        }
+
+        .mainHeading {
+            animation: fadeInDown;
+            animation-duration: 3s;
+        }
+
+        .subHeading {
+            animation: fadeInUp;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
             }
         }
     </style>
@@ -229,10 +250,10 @@
     </div>
 
     <div id="bigDiv">
-        <h2>TRAM PHAM</h2>
+        <h2 class="mainHeading">TRAM PHAM</h2>
 
         <div id="title">
-            <h3>WEB DEVELOPER PORTFOLIO</h3>
+            <h3 class="subHeading">WEB DEVELOPER PORTFOLIO</h3>
         </div>
 
         <div id="icon">
@@ -310,9 +331,9 @@
     </div>
 
     <div id="footer">
-        <a href="https://trampham.net">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
     </div>
 </body>
 
