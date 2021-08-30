@@ -3,30 +3,42 @@
 
 <head>
     <title>Tram's Contact Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <style>
         h1 {
-            font-family: Helvetica, sans-serif;
-            font-weight: lighter;
-            font-size: 1rem;
-            color: grey;
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #666;
             padding: 0.8rem;
         }
 
         h2 {
-            font-family: Didot;
-            font-size: 3rem;
+            font-family: Bodoni Moda;
+            font-size: 3.5rem;
             color: #222;
             text-align: center;
         }
 
         h3 {
-            font-family: Didot;
+            font-family: Bodoni Moda;
             font-size: 2rem;
             color: #222;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin: 0;
         }
 
         span {
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 1.5em;
             font-weight: lighter;
             text-align: left;
@@ -75,13 +87,16 @@
         }
 
         .styleText {
-            font-family: Helvetica;
+            font-family: Roboto;
             font-weight: normal;
             font-size: 1rem;
             color: #222;
         }
 
-        .gitLink a,
+        .gitLink a {
+            text-decoration: none;
+        }
+        
         .gitLink a:hover {
             color: black;
             text-decoration: none;
@@ -157,11 +172,11 @@
             border-top: 0px;
             border-right: 0px;
             border-left: 0px;
-            width: 250px;
-            border-bottom: 1px solid #222;
-            font-family: Helvetica, sans-serif;
+            width: 260px;
+            border-bottom: 1px solid #444;
+            font-family: Roboto, sans-serif;
             font-size: 1rem;
-            color: #444;
+            color: #222;
         }
 
         input[type=submit] {
@@ -178,14 +193,14 @@
         }
 
         label {
-            font-family: Didot, sans-serif;
+            font-family: Bodoni Moda;
             font-weight: normal;
             font-size: 1rem;
             color: black;
             display: block;
-            width: 70px;
+            width: 5.5rem;
             float: left;
-            padding-top: 8px;
+            padding-top: 0.3rem;
         }
 
         .styleLabel {
@@ -193,7 +208,7 @@
         }
 
         textarea {
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto;
             font-weight: normal;
             font-size: 1rem;
             color: #444;
@@ -202,17 +217,17 @@
 
         #errorEmail {
             display: none;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto;
             font-weight: normal;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: #990000;
         }
 
         #errorMes {
             display: none;
-            font-family: Helvetica, sans-serif;
+            font-family: Roboto, sans-serif;
             font-weight: normal;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: #990000;
         }
 
@@ -329,7 +344,7 @@
                     <div id="toContent">
                         <h3>To:</h3>
                         <span>Tram Pham</span><br><br>
-                        <span>tram.phamtb@gmail.com</span>
+                        <span>tram.phamtb86@gmail.com</span>
                     </div>
 
                 </div>
