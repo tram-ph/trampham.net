@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-    <title>Tram's Portfolio: Travel Blog</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Tram Pham's Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+
     <style>
         body {
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
 
         h1 {
@@ -32,54 +28,18 @@
         }
 
         h2 {
-            font-family: Montserrat;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 0;
-            padding: 0;
+            font-family: 'Bodoni Moda', serif;
+            font-weight: normal;
+            font-size: 4rem;
+            color: #222;
         }
 
         h3 {
-            font-family: Montserrat;
-            font-size: 9vw;
-            font-weight: bold;
-            margin: 0;
-            padding: 0;
-            text-indent: -0.6rem;
-        }
-
-        h4 {
-            font-family: Montserrat;
+            font-family: Roboto;
             font-size: 1.5rem;
-            font-weight: lighter;
-            margin: 0;
-            padding: 0;
-            line-height: 4rem;
-        }
-
-        h5 {
-            font-family: Montserrat;
-            font-size: 2.2rem;
-            font-weight: bolder;
-            margin: 0;
-            padding: 0;
-            line-height: 4rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        a:hover {
-            opacity: 0.5;
-        }
-
-        span {
-            font-family: Montserrat;
-            font-size: 1rem;
-            font-weight: lighter;
-            line-height: 1.5rem;
+            color: #666;
+            font-weight: normal;
+            letter-spacing: 0.5rem;
         }
 
         #homeDiv a {
@@ -100,150 +60,109 @@
             border-bottom: 1px solid #bfbfbf;
         }
 
-        #bodyDiv {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        #openContent {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
-        }
-
-        .hiddenContent {
-            display: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .contentDiv {
-            width: 50%;
-            height: 100%;
-        }
-
-        .indentContent {
+        #footer {
+            background-color: #222;
             width: 90%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
-        }
-
-        #heading {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-            width: 100%;
-            height: 3rem;
-            align-items: center;
-            padding-top: 2rem;
-        }
-
-        #menuIcon:hover {
-            opacity: 0.5;
-            cursor: pointer;
-        }
-
-        #menu {
-            width: 1.2rem;
-            height: 2px;
-            background-color: #222;
-            margin: 3px 0;
-        }
-
-        #numbers {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding-top: 16rem;
-            padding-left: 6rem;
-        }
-
-        #numbers h2 {
-            font-size: 0.8rem;
-            padding: 1rem;
-        }
-
-        .city {
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-        }
-
-        #buttonBox {
-            display: flex;
-            flex-direction: row;
-            padding-top: 8rem;
-        }
-
-        .button {
-            height: 2.8rem;
-            width: 2.8rem;
-            border-radius: 50%;
-            border: 2px solid #ccc;
-            margin-right: 0.3rem;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            border: 2px solid #222;
-        }
-
-        .arrow {
-            border: solid black;
-            border-width: 0 1px 1px 0;
-            display: inline-block;
-            padding: 3px;
-        }
-
-        .up {
-            transform: rotate(-135deg) translateX(-1.4rem) translateY(0.2rem);
-        }
-
-        .down {
-            transform: rotate(45deg) translateX(1.4em) translateY(-0.2rem);
-        }
-
-        #line {
-            width: 6rem;
-            height: 0.2rem;
-            background-color: #222;
-        }
-
-        #photoDiv {
-            width: 50%;
-            background-size: cover;
-            height: 100vh;
-            background-image: url('https://images.unsplash.com/photo-1536663815808-535e2280d2c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
-        }
-
-        .exploreBanner {
-            display: none;
-            width: 100%;
-            height: 11rem;
+            height: 1.8rem;
             text-align: center;
-            justify-content: center;
-            background-color: burlywood;
-            margin-top: -5px;
-        }
-
-        #curtainMenu {
-            display: none;
-            width: 100%;
-            opacity: 0.9;
-            background-color: black;
-            position: absolute;
-            top: 0;
+            margin: 0 auto;
+            margin-top: 3rem;
+            padding-top: 0.5rem;
             bottom: 0;
         }
 
-        #menuList {
-            width: 50%;
-            justify-content: right;
-            text-align: right;
+        #bigDiv {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 4rem;
+        }
+
+        #title {
+            margin-top: -1rem;
+        }
+
+        span {
+            color: white;
+            font-family: Roboto;
+            font-weight: normal;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 63rem;
+            width: 57rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-elem {
+            width: 33%;
+            margin: 0 auto;
+            text-align: center;
+            justify-content: center;
+            padding-top: 0.8rem;
+        }
+
+        .gallery-elem:hover {
+            opacity: 0.6;
+        }
+
+        .galleryCaption {
+            width: 93%;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 1rem;
+            text-align: left;
+            font-family: Bodoni Moda;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #222;
+            border-left: 1.5px solid #222;
+        }
+
+        img {
+            width: 295px;
+        }
+
+        #icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 1rem;
+        }
+
+        .gitLink a {
+            text-decoration: none;
+        }
+
+        .gitLink a:hover {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .gitLink {
+            padding: 1.5rem;
+        }
+
+        .styleText {
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1rem;
+            color: #222;
+        }
+
+        .gallery a {
+            color: white;
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1rem;
+            text-decoration: none;
         }
 
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -257,99 +176,73 @@
             }
 
             h2 {
-                font-size: 3rem;
+                font-size: 4rem;
             }
 
             h3 {
-                font-size: 8rem;
-                text-indent: 0;
-                padding-top: 6rem;
-                padding-bottom: 2rem;
-            }
-
-            h4 {
-                font-size: 2.5rem;
-            }
-
-            h5 {
-                font-size: 4rem;
-                line-height: 7rem;
+                font-size: 2rem;
             }
 
             span {
-                font-size: 2.5rem;
-                line-height: 3.5rem;
+                font-size: 1.5rem;
             }
 
-            #bodyDiv {
+            #bigDiv {
                 width: 100%;
             }
 
-            #buttonBox {
-                display: none;
-            }
-
-            .content {
-                padding-bottom: 6rem;
-            }
-
-            .contentDiv {
+            #footer {
                 width: 100%;
-            }
-
-            .city {
+                height: 3.5rem;
                 padding-top: 2rem;
-                padding-bottom: 1.5rem;
+                position: fixed;
             }
 
-            .exploreBanner {
-                display: block;
-            }
-
-            .exploreBanner h2 {
-                padding-top: 2rem;
-                font-size: 2.5rem;
-            }
-
-            #heading {
-                padding-top: 4rem;
-            }
-
-            .hiddenContent {
-                display: block;
-            }
-
-            .hiddenPhoto img {
-                width: 100vw;
-            }
-
-            .indentContent {
-                width: 85%;
-            }
-
-            #menu {
+            svg {
                 width: 3rem;
-                height: 5px;
-                margin: 6px 0;
+                height: 3rem;
             }
 
-            #menuList {
-                width: 90%;
+            .styleText {
+                font-size: 1.5rem;
+            }
+        }
+
+        .mainHeading {
+            animation: fadeInDown;
+            animation-duration: 3s;
+        }
+
+        .subHeading {
+            animation: fadeInUp;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
             }
 
-            #numbers {
-                display: none;
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
             }
 
-            #openContent {
-                flex-direction: column;
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
             }
-
-            #photoDiv {
-                width: 100%;
-            }
-
-
         }
     </style>
 </head>
@@ -361,246 +254,92 @@
         <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
     </div>
 
-    <div id="bodyDiv">
+    <div id="bigDiv">
+        <h2 class="mainHeading">TRAM PHAM</h2>
 
-        <!-- Lisbon -->
-        <div id="openContent">
-            <div class="contentDiv">
-                <div class="indentContent">
-                    <div id="heading">
-                        <div id="travel">
-                            <h2>travel.</h2>
-                        </div>
-                        <div id="menuIcon">
-                            <div id="menu"></div>
-                            <div id="menu"></div>
-                            <div id="menu"></div>
-                        </div>
-                    </div>
+        <div id="title">
+            <h3 class="subHeading">WEB DEVELOPER PORTFOLIO</h3>
+        </div>
 
-                    <div id="numbers">
-                        <h2 id="cityList">01</h2>
-                        <div id="line"></div>
-                        <h2>04</h2>
-                    </div>
+        <div id="icon">
+            <div class="gitLink">
+                <a class="styleText" href="https://github.com/tram-ph/trampham.net" target="_blank">
+                    <svg width="26" height="26" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>github</title>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)"
+                                fill="#000000">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path
+                                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                                        id="github-[#142]"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
 
-                    <div class="city">
-                        <h3 id="cityName">lisbon</h3>
-                    </div>
-
-                    <div class="content">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eaque nesciunt
-                            voluptate
-                            in,
-                            labore ipsam sed, quibusdam repellat fugit eius veniam eligendi illo vel deserunt accusamus
-                            odio
-                            maiores amet? Ea?</span>
-                    </div>
-
-                    <div id="buttonBox">
-                        <div id="btnLeft" class="button">
-                            <i class="arrow up"></i>
-                        </div>
-                        <div id="btnRight" class="button">
-                            <i class="arrow down"></i>
-                        </div>
-                    </div>
-                </div>
-
+                    @tram-ph</a>
             </div>
 
-            <div id="photoDiv"></div>
+            <div class="gitLink">
+                <a class="styleText" href="www.linkedin.com/in/tram-ph" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
 
-            <div class="exploreBanner">
-                <h2>Want to know more?</h2>
-                <h4>Explore further >></h4>
+                    @tram-ph</a>
             </div>
         </div>
 
-        <!-- Tokyo -->
-        <div class="hiddenContent">
-            <div class="contentDiv">
-                <div class="indentContent">
-                    <div class="city">
-                        <h3>tokyo</h3>
-                    </div>
+        <div class="gallery">
 
-                    <div class="content">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eaque nesciunt
-                            voluptate
-                            in,
-                            labore ipsam sed, quibusdam repellat fugit eius veniam eligendi illo vel deserunt accusamus
-                            odio
-                            maiores amet? Ea?</span>
-                    </div>
-                </div>
+            <div class="gallery-elem"><a href="/ecommerce-product-page/index.html" target="_blank">
+                    <img
+                        src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" /></a>
+                <div class="galleryCaption">SHOP</div>
             </div>
 
-            <div class="hiddenPhoto">
-                <img src="https://images.unsplash.com/photo-1544885935-98dd03b09034?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                    alt="">
+            <div class="gallery-elem"><a href="/travel-template.html" target="_blank">
+                    <img
+                        src="https://images.unsplash.com/photo-1536663815808-535e2280d2c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"></a>
+                <div class="galleryCaption">TRAVEL</div>
             </div>
 
-            <div class="exploreBanner">
-                <h2>Want to know more?</h2>
-                <h4>Explore further >></h4>
-            </div>
-        </div>
-
-        <!-- Paris -->
-        <div class="hiddenContent">
-            <div class="contentDiv">
-                <div class="indentContent">
-                    <div class="city">
-                        <h3>paris</h3>
-                    </div>
-
-                    <div class="content">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eaque nesciunt
-                            voluptate
-                            in,
-                            labore ipsam sed, quibusdam repellat fugit eius veniam eligendi illo vel deserunt accusamus
-                            odio
-                            maiores amet? Ea?</span>
-                    </div>
-                </div>
+            <div class="gallery-elem"><a href="/blog-template/index.html" target="_blank">
+                    <img
+                        src="https://images.unsplash.com/photo-1619021016992-07909c5b85d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"></a>
+                <div class="galleryCaption">BLOG</div>
             </div>
 
-            <div class="hiddenPhoto">
-                <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                    alt="">
+            <div class="gallery-elem"><a href="/blog-template/index.html" target="_blank">
+                    <img
+                        src="https://images.unsplash.com/photo-1627517484493-c171f32999cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"></a>
+                <div class="galleryCaption">BLOG</div>
             </div>
 
-            <div class="exploreBanner">
-                <h2>Want to know more?</h2>
-                <h4>Explore further >></h4>
-            </div>
-        </div>
-
-        <!-- Hanoi -->
-        <div class="hiddenContent">
-            <div class="contentDiv">
-                <div class="indentContent">
-                    <div class="city">
-                        <h3>hanoi</h3>
-                    </div>
-
-                    <div class="content">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eaque nesciunt
-                            voluptate
-                            in,
-                            labore ipsam sed, quibusdam repellat fugit eius veniam eligendi illo vel deserunt accusamus
-                            odio
-                            maiores amet? Ea?</span>
-                    </div>
-                </div>
+            <div class="gallery-elem"><a href="/blog-template/index.html" target="_blank">
+                    <img
+                        src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"></a>
+                <div class="galleryCaption">BLOG</div>
             </div>
 
-            <div class="hiddenPhoto">
-                <img src="https://images.unsplash.com/photo-1592202178023-2dbb4527b006?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
-                    alt="">
+            <div class="gallery-elem"><a href="/blog-template/index.html" target="_blank">
+                    <img
+                        src="https://images.unsplash.com/photo-1627794463790-3d17ee099a35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"></a>
+                <div class="galleryCaption">BLOG</div>
             </div>
 
-            <div class="exploreBanner">
-                <h2>Want to know more?</h2>
-                <h4>Explore further >></h4>
-            </div>
-        </div>
-
-
-    </div>
-
-    <!-- Menu-->
-    <div id="curtainMenu">
-        <div id="menuList">
-            <h4><a id="closeMenu" href="#">X</a></h4>
-            <h5><a href="#">About us</a></h5>
-            <h5><a href="#">Tours</a></h5>
-            <h5><a href="#">Testimonials</a></h5>
-            <h5><a href="#">Book with us</a></h5>
         </div>
     </div>
 
+    <div id="footer">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+    </div>
 </body>
-
-<script>
-    /* Click Menu Icon */
-    var openMenu = document.getElementById('menuIcon');
-    openMenu.addEventListener('click', function (event) {
-        event.preventDefault();
-        var open = document.getElementById('curtainMenu').style.display = "block";
-    });
-
-
-    /* Turn Off Menu Icon */
-    var closeMenu = document.getElementById('closeMenu');
-    closeMenu.addEventListener('click', function (event) {
-        event.preventDefault();
-        var close = document.getElementById('curtainMenu').style.display = "none";
-    });
-
-    /* List of cities images */
-    const cities = [
-        "https://images.unsplash.com/photo-1536663815808-535e2280d2c2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1544885935-98dd03b09034?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-        "https://images.unsplash.com/photo-1549144511-f099e773c147?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-        "https://images.unsplash.com/photo-1592202178023-2dbb4527b006?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80"
-    ];
-
-    var cityIndex = 0;
-
-    /* Click Up Button*/
-    var buttonLeft = document.getElementById('btnLeft');
-    buttonLeft.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        cityIndex += 1;
-
-        if (cityIndex > 3) {
-            cityIndex = 0;
-        }
-
-        setHeading()
-
-        var clickBtnLeft = document.getElementById('photoDiv').style.backgroundImage = "url(" + cities[
-            cityIndex] + ")";
-
-    });
-
-    /* Click Down Button*/
-    var buttonRight = document.getElementById('btnRight');
-    buttonRight.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        cityIndex -= 1;
-
-        if (cityIndex < 0) {
-            cityIndex = 3;
-        }
-
-        setHeading()
-
-        var clickBtnRight = document.getElementById('photoDiv').style.backgroundImage = "url(" + cities[
-            cityIndex] + ")";
-
-    });
-
-
-    function setHeading() {
-        if (cityIndex == 0) {
-            document.getElementById("cityList").innerHTML = "01";
-            document.getElementById("cityName").innerHTML = "lisbon";
-        } else if (cityIndex == 1) {
-            document.getElementById("cityList").innerHTML = "02";
-            document.getElementById("cityName").innerHTML = "tokyo";
-        } else if (cityIndex == 2) {
-            document.getElementById("cityList").innerHTML = "03";
-            document.getElementById("cityName").innerHTML = "paris";
-        } else if (cityIndex == 3) {
-            document.getElementById("cityList").innerHTML = "04";
-            document.getElementById("cityName").innerHTML = "hanoi";
-        }
-    }
-</script>
 
 </html>
