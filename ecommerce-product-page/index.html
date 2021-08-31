@@ -3,33 +3,50 @@
 
 <head>
     <title>Tram's Portfolio: Shop</title>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         h1 {
-            font-family: Helvetica;
-            font-weight: lighter;
-            font-size: 1rem;
-            color: grey;
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #666;
             padding: 0.8rem;
         }
 
         h2 {
-            font-family: Gill Sans;
+            font-family: Montserrat, sans-serif;
             font-size: 1.3rem;
-            font-weight: lighter;
+            font-weight: normal;
             color: #444444;
         }
 
         h3 {
-            font-family: Gill Sans;
-            font-size: 1.3rem;
-            font-weight: lighter;
+            font-family: Montserrat, sans-serif;
+            font-size: 1.2rem;
+            font-weight: normal;
             color: #808080;
-            padding-left: 20px;
+            padding-left: 2.5rem;
         }
 
         h4 {
-            font-family: Gill Sans;
+            font-family: Montserrat, sans-serif;
             font-size: 1rem;
             font-weight: lighter;
             color: #808080;
@@ -38,7 +55,7 @@
         }
 
         h5 {
-            font-family: Gill Sans;
+            font-family: Montserrat, sans-serif;
             font-weight: lighter;
             font-size: 2rem;
             color: #222222;
@@ -46,33 +63,9 @@
             margin: 1rem;
         }
 
-        h6 {
-            font-family: Gill Sans;
-            font-weight: normal;
-            font-size: 1.3rem;
-            color: white;
-            margin: 0 auto;
-        }
-
-        h7 {
-            font-family: Gill Sans;
-            font-weight: lighter;
-            font-size: 1.8rem;
-            color: #222222;
-            margin-top: 2rem;
-        }
-
-        h8 {
-            font-family: Gill Sans;
-            font-weight: lighter;
-            font-size: 1.5rem;
-            color: #808080;
-            margin-top: 1rem;
-        }
-
         p {
-            font-family: Helvetica;
-            font-weight: lighter;
+            font-family: Roboto;
+            font-weight: normal;
             font-size: 1.3rem;
             color: #808080;
             text-align: left;
@@ -109,7 +102,7 @@
             width: 100%;
             padding-top: 3rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #808080;
+            border-bottom: 1px solid #996633;
         }
 
         #yourshopContainer {
@@ -149,7 +142,6 @@
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-
         }
 
         #bigPhoto {
@@ -178,9 +170,7 @@
             flex-direction: column;
             margin-left: 4rem;
             width: 90%;
-            padding-top: 2rem;
             padding-bottom: 2rem;
-            border-top: 1px solid #808080;
         }
 
         #cart {
@@ -194,7 +184,12 @@
         }
 
         #cart:hover {
-            opacity: 0.8;
+            opacity: 0.6;
+        }
+
+        #cart h2 {
+            color: white;
+            margin: 0 auto;
         }
 
         #related {
@@ -213,15 +208,42 @@
             justify-content: space-between;
         }
 
-        .smallPhotos img:hover {
-            opacity: 0.5;
+        #relatedPhoto h5 {
+            font-size: 1.5rem;
+            margin-left: 0rem;
+            padding-top: 1rem;
+            margin: 0;
         }
 
         .relatedGallery {
             display: flex;
             flex-direction: column;
-            flex-direction: left;
+            padding-right: 1.5rem;
             padding-bottom: 4rem;
+        }
+
+        .price {
+            color: #808080;
+        }
+
+        .smallPhotos img:hover {
+            opacity: 0.5;
+        }
+
+        /* For Media Query*/
+
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
         }
     </style>
 </head>
@@ -229,8 +251,8 @@
 <body>
     <div id="homeDiv">
         <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
-        <h1><a href='https://trampham.net'>_RESUME</a></h1>
-        <h1><a href='https://trampham.net'>_CONTACT</a></h1>
+        <h1><a href='https://trampham.net/resume.html'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
     </div>
 
     <div id="bigDiv">
@@ -268,7 +290,7 @@
             <div id="contentDiv">
                 <div id="contentHeading">
                     <h5>KNITWARE</h5>
-                    <h5>$99.99</h5>
+                    <h5 class="price">$99.99</h5>
                 </div>
 
                 <div id="productContent">
@@ -279,7 +301,7 @@
                 </div>
 
                 <div id="cart">
-                    <h6>ADD TO CART</h6>
+                    <h2>ADD TO CART</h2>
                 </div>
 
             </div>
@@ -292,24 +314,24 @@
 
         <div id="relatedPhoto">
             <div class="relatedGallery">
-                <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+                <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                     width="350" height="500" />
-                <h7>T-Shirt</h7>
-                <h8>$49.99</h8>
+                <h5>Watch</h5>
+                <h5 class="price">$49.99</h5>
             </div>
 
             <div class="relatedGallery">
                 <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=954&q=80"
                     width="350" height="500" />
-                <h7>Cardigan</h7>
-                <h8>$49.99</h8>
+                <h5>Cardigan</h5>
+                <h5 class="price">$49.99</h5>
             </div>
 
             <div class="relatedGallery">
                 <img src="https://images.unsplash.com/photo-1598628461950-268968751a2e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
                     width="350" height="500" />
-                <h7>Hoddie</h7>
-                <h8>$49.99</h8>
+                <h5>Hoddie</h5>
+                <h5 class="price">$49.99</h5>
             </div>
 
         </div>
