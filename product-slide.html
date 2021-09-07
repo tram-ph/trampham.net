@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tram's Portfolio: Product Slide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Text Style */
+        h1 {
+            font-family: Roboto, sans-serif;
+            font-weight: lighter;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 0.8rem;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #222;
+            padding-right: 2rem;
+            margin: 0;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 14rem;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sale {
+            color: #800020;
+        }
+
+        /* Nagivation: Portfolio, Resume, Contact */
+        #homeDiv a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #homeDiv a:hover {
+            color: #cc9900;
+        }
+
+        #homeDiv {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        /* Body*/
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        #bodyDiv {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: #f1f1f1;
+        }
+
+        /* Logo, Menu, Search, Heart, Cart*/
+        #menuDiv {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 85%;
+            height: 6rem;
+            padding-top: 1rem;
+            z-index: 5;
+        }
+
+        #menuList {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #menuList :hover {
+            opacity: 0.6;
+        }
+
+        /* Search */
+        .search {
+            margin: 0 auto;
+            width: 20rem;
+            display: inline-flex;
+        }
+
+        form.search input[type=text] {
+            padding: 10px;
+            font-family: Montserrat, sans-serif;
+            font-size: 1rem;
+            float: left;
+            width: 80%;
+            color: #444;
+            border-radius: 2rem;
+            border: none;
+            background-color: #f1f1f1;
+            box-shadow: 0.6rem 0.6rem 1.2rem #999;
+        }
+
+        form.search button {
+            float: left;
+            width: 20%;
+            padding: 0;
+            margin: 0;
+            color: #444;
+            font-size: 1.2rem;
+            border: 0;
+            background-color: inherit;
+            border: none;
+            margin-left: -4rem;
+            cursor: pointer;
+        }
+
+        form.search button:hover {
+            opacity: 0.6;
+        }
+
+        form.search::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #cart {
+            display: inline-flex;
+        }
+
+        #cartHover:hover {
+            opacity: 0.6;
+        }
+
+        .fa:hover {
+            opacity: 0.6;
+        }
+
+        /* Photo */
+        #photoBox {
+            display: flex;
+            flex-direction: row;
+            width: 85%;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Buttons */
+        .buttonBox {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+        }
+
+        .button:hover {
+            opacity: 0.6;
+        }
+
+
+        /* Arrow */
+        .arrow {
+            border: solid #444;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .left {
+            transform: rotate(135deg);
+        }
+
+        .right {
+            transform: rotate(-45deg);
+        }
+
+        /* Circle, Brand Name, Photo */
+        .circleBrand {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .circle {
+            width: 38rem;
+            height: 38rem;
+            border-radius: 19rem;
+            background-color: #F2D2BD;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .brandContainer {
+            display: flex;
+            flex-direction: row;
+            width: 85%;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brandName {
+            z-index: 2;
+            position: absolute;
+            margin-top: -55rem;
+            animation: slideInUp;
+            animation-delay: 0;
+            animation-duration: 1s;
+        }
+
+        .photoProduct {
+            display: flex;
+            z-index: 3;
+            position: absolute;
+            margin-left: 10rem;
+            animation: zoomin;
+            animation-duration: 1s;
+        }
+
+        /* Image and Brand Name animation */
+        @keyframes zoomin {
+            0% {
+                transform: scale(2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20rem)
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Shadow */
+        .shadow {
+            box-shadow: 0.5rem 0.5rem 1.2rem #999;
+        }
+
+        .rounded-border {
+            border-radius: 1.4rem;
+        }
+
+        .background-white {
+            background-color: #f1f1f1;
+        }
+
+        .circle-border {
+            border-radius: 30%;
+        }
+
+        .textshadow {
+            text-shadow: 0.5em 0.2rem 1rem #999;
+        }
+
+        .stroke {
+            -webkit-text-stroke: 4px #666;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .hover {
+            opacity: 0.6;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="homeDiv">
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net/resume.html'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+    </div>
+
+    <div id="bodyDiv">
+
+        <!--Menu-->
+        <div id="menuDiv">
+            <div id="logo">
+                <img src="/images/yourLogo.gif" alt="">
+            </div>
+
+            <div id="menuList">
+                <h2>HOME</h2>
+                <h2>BAG</h2>
+                <h2>CLOTHING</h2>
+                <h2>ACCESSORIES</h2>
+                <h2 id="sale">SALE</h2>
+            </div>
+
+            <div id="searchBar">
+                <form class="search" action="#">
+                    <input type="text" placeholder="Search.." name="search2">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <div id="cart">
+                <i class="fa fa-heart" style="font-size:24px;color:#222;padding-right:2rem;margin:0"></i>
+                <h2 id="cartHover">Cart</h2>
+            </div>
+        </div>
+
+
+        <!--Photo-->
+        <div id="photoBox">
+
+            <!--Button Left-->
+            <div id="btnLeft" class="buttonBox button shadow background-white circle-border">
+                <div>
+                    <i class="arrow left"></i>
+                </div>
+            </div>
+
+            <!--CHANEL-->
+            <div id="chanel" class="brandContainer">
+                <div class="circleBrand">
+                    <div class="circle">
+                    </div>
+
+                    <div class="brandName">
+                        <h3 class="slideInUp">CHANEL</h3>
+                    </div>
+                </div>
+
+                <div class="photoProduct">
+                    <img src="/images/chanel2.png" alt="">
+                </div>
+            </div>
+
+            <!--GUCCI-->
+            <div id="gucci" class="brandContainer hide">
+                <div class="circleBrand">
+                    <div class="circle">
+                    </div>
+                    <div class="brandName">
+                        <h3 class="slideInUp">GUCCI</h3>
+                    </div>
+                </div>
+
+                <div class="photoProduct">
+                    <img src="/images/Gucci1.png" alt="">
+                </div>
+            </div>
+
+            <!--FENDI-->
+            <div id="fendi" class="brandContainer hide">
+                <div class="circleBrand">
+                    <div class="circle">
+                    </div>
+                    <div class="brandName">
+                        <h3>FENDI</h3>
+                    </div>
+                </div>
+
+                <div class="photoProduct">
+                    <img src="/images/Fendi1.png" alt="">
+                </div>
+            </div>
+
+            <!--LOEWE-->
+            <div id="loewe" class="brandContainer hide">
+                <div class="circleBrand">
+                    <div class="circle">
+                    </div>
+                    <div class="brandName">
+                        <h3>LOEWE</h3>
+                    </div>
+                </div>
+
+                <div class="photoProduct">
+                    <img src="/images/Loewe1.png" alt="">
+                </div>
+            </div>
+
+
+            <!--Button Right-->
+            <div id="btnRight" class="buttonBox button shadow background-white circle-border">
+                <div>
+                    <i class="arrow right"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    const brand = ["chanel", "gucci", "fendi", "loewe"];
+
+    var brandIndex = 0;
+
+    /* Click Left Button*/
+    var buttonLeft = document.getElementById('btnLeft');
+    buttonLeft.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var currentBrand = document.getElementById(brand[brandIndex])
+        currentBrand.classList.add("hide"); // hide
+
+        var nextBrandIndex = brandIndex + 1;
+        if (nextBrandIndex > 3) {
+            nextBrandIndex = 0;
+        }
+
+        var nextBrand = document.getElementById(brand[nextBrandIndex]);
+        nextBrand.classList.remove("hide"); // show
+
+        brandIndex = nextBrandIndex;
+    });
+
+
+    /* Click Right Button*/
+    var buttonRight = document.getElementById('btnRight');
+    buttonRight.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var currentBrand = document.getElementById(brand[brandIndex])
+        currentBrand.classList.add("hide"); // hide
+
+        var prevBrandIndex = brandIndex - 1;
+        if (prevBrandIndex < 0) {
+            prevBrandIndex = 3;
+        }
+
+        var nextBrand = document.getElementById(brand[prevBrandIndex]);
+        nextBrand.classList.remove("hide"); // show
+
+        brandIndex = prevBrandIndex;
+    });
+</script>
+
+</html>
