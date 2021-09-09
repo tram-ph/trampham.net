@@ -37,7 +37,7 @@
         h3 {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
-            font-size: 14rem;
+            font-size: clamp(5rem, 11vw, 11rem);
             color: #222;
             margin: 0;
             padding: 0;
@@ -65,21 +65,21 @@
             margin: 0 auto;
             text-align: right;
             border-bottom: 1px solid #bfbfbf;
+            height: 6vh;
         }
 
         /* Body*/
         body {
             padding: 0;
             margin: 0;
-            width: 100%;
         }
 
         #bodyDiv {
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 100%;
             background-color: #f1f1f1;
+            height: 94vh;
         }
 
         /* Logo, Menu, Search, Heart, Cart*/
@@ -90,9 +90,9 @@
             justify-content: space-between;
             margin: 0 auto;
             width: 85%;
-            height: 6rem;
-            padding-top: 1rem;
-            z-index: 5;
+            height: 8vh;
+            position: relative;
+            z-index: 6;
         }
 
         #menuList {
@@ -148,6 +148,10 @@
             display: table;
         }
 
+        input:focus {
+            outline: none;
+        }
+
         #cart {
             display: inline-flex;
         }
@@ -165,6 +169,7 @@
             display: flex;
             flex-direction: row;
             width: 85%;
+            height: 86vh;
             margin: 0 auto;
             align-items: center;
             justify-content: center;
@@ -210,48 +215,40 @@
         }
 
         /* Circle, Brand Name, Photo */
-        .circleBrand {
+        .brandContainer {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             margin: 0 auto;
-            height: 100vh;
-            align-items: center;
         }
 
         .circle {
-            width: 38rem;
-            height: 38rem;
-            border-radius: 19rem;
-            background-color: #F2D2BD;
             z-index: 1;
-            position: absolute;
-        }
-
-        .brandContainer {
-            display: flex;
-            flex-direction: row;
-            width: 85%;
-            margin: 0 auto;
-            align-items: center;
+            width: 32rem;
+            height: 32rem;
+            border-radius: 50%;
+            background-color: #F2D2BD;
             justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: absolute;
         }
 
         .brandName {
             z-index: 2;
-            position: absolute;
-            margin-top: -55rem;
             animation: slideInUp;
             animation-delay: 0;
             animation-duration: 1s;
+            animation-fill-mode: forwards;
         }
 
         .photoProduct {
-            display: flex;
-            z-index: 3;
-            position: absolute;
-            margin-left: 10rem;
+            z-index: 4;
+            margin-left: 12rem;
             animation: zoomin;
             animation-duration: 1s;
+            position: absolute;
         }
 
         /* Image and Brand Name animation */
@@ -268,11 +265,11 @@
         @keyframes slideInUp {
             0% {
                 opacity: 0;
-                transform: translateY(20rem)
+                transform: translateY(0)
             }
 
             100% {
-                transform: translateY(0);
+                transform: translateY(-25rem);
             }
         }
 
@@ -308,8 +305,6 @@
         .hover {
             opacity: 0.6;
         }
-
-
     </style>
 </head>
 
@@ -337,8 +332,8 @@
             </div>
 
             <div id="searchBar">
-                <form class="search" action="#">
-                    <input type="text" placeholder="Search.." name="search2">
+                <form class="search">
+                    <input type="text" placeholder="Search..">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
@@ -348,7 +343,6 @@
                 <h2 id="cartHover">Cart</h2>
             </div>
         </div>
-
 
         <!--Photo-->
         <div id="photoBox">
@@ -362,63 +356,50 @@
 
             <!--CHANEL-->
             <div id="chanel" class="brandContainer">
-                <div class="circleBrand">
-                    <div class="circle">
-                    </div>
-
-                    <div class="brandName">
-                        <h3 class="slideInUp">CHANEL</h3>
-                    </div>
+                <div class="circle">
                 </div>
-
+                <div class="brandName">
+                    <h3>CHANEL</h3>
+                </div>
                 <div class="photoProduct">
                     <img src="/images/chanel2.png" alt="">
-                </div>
+                </div>                
             </div>
 
             <!--GUCCI-->
             <div id="gucci" class="brandContainer hide">
-                <div class="circleBrand">
-                    <div class="circle">
-                    </div>
-                    <div class="brandName">
-                        <h3 class="slideInUp">GUCCI</h3>
-                    </div>
+                <div class="circle">
                 </div>
-
+                <div class="brandName">
+                    <h3 class="slideInUp">GUCCI</h3>
+                </div>
                 <div class="photoProduct">
                     <img src="/images/Gucci1.png" alt="">
-                </div>
+                </div> 
             </div>
 
             <!--FENDI-->
             <div id="fendi" class="brandContainer hide">
-                <div class="circleBrand">
-                    <div class="circle">
-                    </div>
-                    <div class="brandName">
-                        <h3>FENDI</h3>
-                    </div>
+                <div class="circle">
                 </div>
-
+                <div class="brandName">
+                    <h3>FENDI</h3>
+                </div>
                 <div class="photoProduct">
                     <img src="/images/Fendi1.png" alt="">
-                </div>
+                </div>   
             </div>
 
             <!--LOEWE-->
             <div id="loewe" class="brandContainer hide">
-                <div class="circleBrand">
-                    <div class="circle">
-                    </div>
-                    <div class="brandName">
-                        <h3>LOEWE</h3>
-                    </div>
+                <div class="circle">
                 </div>
-
+                <div class="brandName">
+                    <h3>LOEWE</h3>
+                </div>
                 <div class="photoProduct">
                     <img src="/images/Loewe1.png" alt="">
-                </div>
+                </div>              
             </div>
 
 
