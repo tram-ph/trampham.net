@@ -221,6 +221,8 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            position: relative;
+            height: 100%;
         }
 
         .circle {
@@ -241,6 +243,8 @@
             animation-delay: 0;
             animation-duration: 1s;
             animation-fill-mode: forwards;
+            position: absolute;
+            top:5rem;
         }
 
         .photoProduct {
@@ -269,11 +273,11 @@
         @keyframes slideInUp {
             0% {
                 opacity: 0;
-                transform: translateY(0)
+                transform: translateY(10rem)
             }
 
             100% {
-                transform: translateY(-25rem);
+                transform: translateY(0);
             }
         }
 
