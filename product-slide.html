@@ -4,6 +4,7 @@
 <head>
     <title>Tram's Portfolio: Product Slide</title>
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@
             padding: 0;
         }
 
-        #sale {
+        .sale {
             color: #800020;
         }
 
@@ -105,6 +106,14 @@
             opacity: 0.6;
         }
 
+        #menuMobile {
+            display: none;
+        }
+
+        #curtainMenu{
+            display: none;
+        }
+
         /* Search */
         .search {
             margin: 0 auto;
@@ -153,11 +162,11 @@
             outline: none;
         }
 
-        #cart {
+        .cart {
             display: inline-flex;
         }
 
-        #cartHover:hover {
+        .cartHover:hover {
             opacity: 0.6;
         }
 
@@ -193,6 +202,10 @@
 
         .button:hover {
             opacity: 0.6;
+        }
+
+        #mobileButtons {
+            display: none;
         }
 
 
@@ -312,6 +325,138 @@
         .hover {
             opacity: 0.6;
         }
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            #homeDiv {
+                width: 100vw;
+                justify-content: space-evenly;
+                height: 8vh;
+            }
+
+            #bodyDiv {
+                height: 92vh;
+                width: 100vw;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+
+            h3 {
+                font-size: 10rem;
+            }
+
+            #menuDiv {
+                display: none;
+            }
+
+            #menuMobile {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 2rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                margin-bottom: 3rem;
+                box-shadow: 0.5rem 0.5rem 1.2rem #999;
+                
+            }
+
+            #menu {
+                width: 3.5rem;
+                height: 0.4rem;
+                background-color: #333;
+                margin: 0.6rem 0;
+            }
+
+            
+            #menuIcon{
+                width: 33.33%;
+            }
+
+            .logo {
+                width: 33.33%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .logo img {
+                width: 9rem;
+            }
+
+            .cart{
+                width: 33.33%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+           
+
+            #photoBox {
+                width: 100vw;
+            }
+
+            .circle {
+                width: 38vh;
+                height: 38vh;
+            }
+
+            .bag {
+                width: 40vh;
+            }
+
+            #mobileButtons {
+                display: inline-flex;
+                justify-content: center;
+                padding-bottom: 4rem;
+            }
+
+            .button {
+                width: 8rem;
+                height: 8rem;
+                margin: 2rem;
+            }
+
+            .webButton {
+                display: none;
+            }
+
+            .arrow {
+                border-width: 0 0.4rem 0.4rem 0;
+                padding: 0.5rem;
+            }
+
+            #curtainMenu {
+                width: 70%;
+                height: 100vh;
+                opacity: 0.95;
+                background-color: white;
+                z-index: 9;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                padding: 4rem;
+            }
+
+            #menuListCurtain {
+                justify-content: left;
+                text-align: left;
+            }
+
+            #menuListCurtain h2{
+                font-size: 4rem;
+                color: #222;
+                padding-bottom: 2rem;
+            }
+
+            a{
+                text-decoration: none;
+                color: #222;
+            }
+        }
     </style>
 </head>
 
@@ -326,7 +471,7 @@
 
         <!--Menu-->
         <div id="menuDiv">
-            <div id="logo">
+            <div class="logo">
                 <img src="/images/yourLogo.gif" alt="">
             </div>
 
@@ -338,16 +483,35 @@
                 <h2 id="sale">SALE</h2>
             </div>
 
-            <div id="searchBar">
+            <div class="searchBar">
                 <form class="search">
                     <input type="text" placeholder="Search..">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
 
-            <div id="cart">
+            <div class="cart">
                 <i class="fa fa-heart" style="font-size:24px;color:#222;padding-right:2rem;margin:0"></i>
-                <h2 id="cartHover">Cart</h2>
+                <h2 class="cartHover">Cart</h2>
+            </div>
+        </div>
+
+        <!--Menu- Mobile-->
+        <div id="menuMobile">
+            <div id="menuIcon">
+                <div id="menu"></div>
+                <div id="menu"></div>
+                <div id="menu"></div>
+            </div>
+
+            <div class="logo">
+                <img src="/images/yourLogo.gif" alt="">
+            </div>
+
+            <div class="cart">
+                <i class="fa fa-search" style="font-size:2.5rem;color:#333;padding-right:2rem;margin:0"></i>
+                <i class="fa fa-heart" style="font-size:2.5rem;color:#333;padding-right:2rem;margin:0"></i>
+                <i class="fa fa-shopping-bag" style="font-size:2.5rem;color:#333;padding-right:2rem;margin:0"></i>
             </div>
         </div>
 
@@ -355,7 +519,7 @@
         <div id="photoBox">
 
             <!--Button Left-->
-            <div id="btnLeft" class="buttonBox button shadow background-white circle-border">
+            <div id="btnLeft" class="buttonBox button webButton shadow background-white circle-border">
                 <div>
                     <i class="arrow left"></i>
                 </div>
@@ -411,7 +575,7 @@
 
 
             <!--Button Right-->
-            <div id="btnRight" class="buttonBox button shadow background-white circle-border">
+            <div id="btnRight" class="buttonBox button webButton shadow background-white circle-border">
                 <div>
                     <i class="arrow right"></i>
                 </div>
@@ -419,6 +583,35 @@
 
         </div>
 
+
+        <div id="mobileButtons">
+            <!--Button Left-->
+            <div id="btnLeftMobile" class="buttonBox button shadow background-white circle-border">
+                <div>
+                    <i class="arrow left"></i>
+                </div>
+            </div>
+
+            <!--Button Right-->
+            <div id="btnRightMobile" class="buttonBox button shadow background-white circle-border">
+                <div>
+                    <i class="arrow right"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Curtain Menu-->
+    <div id="curtainMenu">
+        <div id="menuListCurtain">
+            <h2><a id="closeMenu" href="#">X</a></h2>
+            <h2>HOME</h2>
+            <h2>BAG</h2>
+            <h2>CLOTHING</h2>
+            <h2>ACCESSORIES</h2>
+            <h2 class="sale" style="color:#800020">SALE</h2>
+        </div>
     </div>
 
 </body>
@@ -433,6 +626,36 @@
     buttonLeft.addEventListener('click', function (event) {
         event.preventDefault();
 
+        clickLeft() 
+    });
+
+    /* Click Right Button*/
+    var buttonRight = document.getElementById('btnRight');
+    buttonRight.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        clickRight()
+    });
+
+     /* MOBILE Click Left Button*/
+     var buttonLeft = document.getElementById('btnLeftMobile');
+    buttonLeft.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        clickLeft()
+    });
+
+
+    /* MOBILE Click Right Button*/
+    var buttonRight = document.getElementById('btnRightMobile');
+    buttonRight.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        clickRight()
+    });
+
+    /* Function */
+    function clickLeft() {
         var currentBrand = document.getElementById(brand[brandIndex])
         currentBrand.classList.add("hide"); // hide
 
@@ -445,14 +668,9 @@
         nextBrand.classList.remove("hide"); // show
 
         brandIndex = nextBrandIndex;
-    });
+    }
 
-
-    /* Click Right Button*/
-    var buttonRight = document.getElementById('btnRight');
-    buttonRight.addEventListener('click', function (event) {
-        event.preventDefault();
-
+    function clickRight() {
         var currentBrand = document.getElementById(brand[brandIndex])
         currentBrand.classList.add("hide"); // hide
 
@@ -465,6 +683,21 @@
         nextBrand.classList.remove("hide"); // show
 
         brandIndex = prevBrandIndex;
+    }
+
+    /* Click Menu Icon */
+    var openMenu = document.getElementById('menuIcon');
+    openMenu.addEventListener('click', function (event) {
+        event.preventDefault();
+        var open = document.getElementById('curtainMenu').style.display = "block";
+    });
+
+
+    /* Turn Off Menu Icon */
+    var closeMenu = document.getElementById('closeMenu');
+    closeMenu.addEventListener('click', function (event) {
+        event.preventDefault();
+        var close = document.getElementById('curtainMenu').style.display = "none";
     });
 </script>
 
