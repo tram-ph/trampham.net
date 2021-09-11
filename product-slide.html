@@ -110,7 +110,7 @@
             display: none;
         }
 
-        #curtainMenu{
+        #curtainMenu {
             display: none;
         }
 
@@ -340,7 +340,7 @@
             }
 
             h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
                 font-weight: 500;
             }
 
@@ -362,7 +362,6 @@
                 padding-bottom: 2rem;
                 margin-bottom: 3rem;
                 box-shadow: 0.5rem 0.5rem 1.2rem #999;
-                
             }
 
             #menu {
@@ -372,8 +371,7 @@
                 margin: 0.6rem 0;
             }
 
-            
-            #menuIcon{
+            #menuIcon {
                 width: 33.33%;
             }
 
@@ -387,11 +385,12 @@
                 width: 9rem;
             }
 
-            .cart{
+            .cart {
                 width: 33.33%;
                 display: flex;
                 justify-content: flex-end;
             }
+
 
             .circle {
                 width: 38vh;
@@ -399,8 +398,7 @@
             }
 
             .bag {
-                width: 40vh;
-                display:none;
+                width: 60vw;
             }
 
             #mobileButtons {
@@ -441,15 +439,19 @@
                 text-align: left;
             }
 
-            #menuListCurtain h2{
+            #menuListCurtain h2 {
                 font-size: 4rem;
                 color: #222;
                 padding-bottom: 2rem;
             }
 
-            a{
+            a {
                 text-decoration: none;
                 color: #222;
+            }
+
+            .photoProduct {
+                margin-left: 0;
             }
         }
     </style>
@@ -621,7 +623,7 @@
     buttonLeft.addEventListener('click', function (event) {
         event.preventDefault();
 
-        clickLeft() 
+        clickLeft()
     });
 
     /* Click Right Button*/
@@ -632,8 +634,8 @@
         clickRight()
     });
 
-     /* MOBILE Click Left Button*/
-     var buttonLeft = document.getElementById('btnLeftMobile');
+    /* MOBILE Click Left Button*/
+    var buttonLeft = document.getElementById('btnLeftMobile');
     buttonLeft.addEventListener('click', function (event) {
         event.preventDefault();
 
