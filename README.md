@@ -1,6 +1,6 @@
 # 👋 trampham.net
 
-Hello! This repo contains code for [trampham.net]{https://trampham.net}.
+Hello! This repo contains code for [trampham.net](https://trampham.net).
 
 ## 🔨 Projects
 
