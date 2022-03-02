@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tram's Portfolio: Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 0.8rem;
+        }
+
+        h2 {
+            font-family: Montserrat, sans-serif;
+            font-size: 2.6rem;
+            font-weight: normal;
+            color: #333;
+        }
+
+        h3 {
+            font-family: Montserrat, sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #333;
+            padding-left: 2.5rem;
+        }
+
+        #homeDiv a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #homeDiv a:hover {
+            color: #cc9900;
+        }
+
+        #homeDiv {
+            display: flex;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        #bigDiv {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #titleGame {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 6vh;
+            padding-bottom: 2rem;
+        }
+
+        #square {
+            height: 1rem;
+            width: 1rem;
+            background-color: #333;
+            position: relative;
+            animation: moveSquare 2s;
+        }
+
+        @keyframes moveSquare {
+            0% {
+                left: -220px;
+            }
+
+            50% {
+                left: 220px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        #description {
+            display: flex;
+            flex-direction: row;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            padding-bottom: 2vh;
+        }
+
+        li {
+            line-height: 1.2rem;
+        }
+
+        #videoBox {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 6vh;
+        }
+
+        /* For Media Query*/
+
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="homeDiv">
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net/resume.html'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+    </div>
+
+    <div id="bigDiv">
+        <div id="titleGame">
+            <h2>SQUARE HUNT GAME</h2>
+            <div id=square></div>
+            <div id=drawLine></div>
+        </div>
+
+        <div id="description">
+            <h3>The game is desgined according to the following requirements:</h3>
+            <h3>
+                <li>User enters desired number of grids and a difficulty level between 1 to 3.</li>
+                <li>Program draws the grids, displays game title, start button and score on the top.</li>
+                <li>Once user clicks on the start button, the game commences but other clicks should be ignored.</li>
+                <li>Implement the gameplay, which includes displaying ten squares on the grid one after the other.
+                    Display the current square number (1 to 10) at the top. Each square should occupy a random box on
+                    the grid. A square would only stay on screen for a period of 2, 1.5 or 1 seconds, corresponding to
+                    difficulty levels of 1, 2 and 3 respectively.</li>
+                <li>Let the user play the game with mouse. Objective of the game is to shoot (click) as many squares as
+                    possible. A hit increases the score and a miss deducts the score by one. Only the clicks inside grid
+                    boundaries should be entertained. If a square is successfully hit, its colour should change to give
+                    user an indication of success.</li>
+                <li>Once the time is elapsed for all ten squares, replace the box number at the top with the ‘finished’
+                    label.</li>
+                </br>
+                <li>Language used: PYTHON.</li>
+            </h3>
+        </div>
+        <div id="videoBox">
+            <img src="/images/Square Hunt Game.gif" />
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
