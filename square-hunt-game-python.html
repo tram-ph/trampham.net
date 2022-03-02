@@ -95,6 +95,7 @@
             50% {
                 left: 220px;
             }
+
             100% {
                 left: 0;
             }
@@ -110,6 +111,23 @@
 
         li {
             line-height: 1.2rem;
+        }
+
+        #more {
+            display: none;
+        }
+
+        #myBtn {
+            font-family: Montserrat, sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #333;
+            background-color: #eee;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            cursor: pointer;
         }
 
         #videoBox {
@@ -132,6 +150,34 @@
                 justify-content: space-evenly;
             }
 
+            h2 {
+                font-size: 4rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            #titleGame {
+                padding-top: 3vh;
+            }
+
+            #description {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            li {
+                line-height: 2rem;
+            }
+
+            #myBtn {
+                font-size: 2rem;
+                padding-left: 2rem;
+            padding-right: 2rem;
+            }
+
         }
     </style>
 </head>
@@ -147,7 +193,6 @@
         <div id="titleGame">
             <h2>SQUARE HUNT GAME</h2>
             <div id=square></div>
-            <div id=drawLine></div>
         </div>
 
         <div id="description">
@@ -156,30 +201,57 @@
                 <li>User enters desired number of grids and a difficulty level between 1 to 3.</li>
                 <li>Program draws the grids, displays game title, start button and score on the top.</li>
                 <li>Once user clicks on the start button, the game commences but other clicks should be ignored.</li>
-                <li>Implement the gameplay, which includes displaying ten squares on the grid one after the other.
-                    Display the current square number (1 to 10) at the top. Each square should occupy a random box on
-                    the grid. A square would only stay on screen for a period of 2, 1.5 or 1 seconds, corresponding to
-                    difficulty levels of 1, 2 and 3 respectively.</li>
-                <li>Let the user play the game with mouse. Objective of the game is to shoot (click) as many squares as
-                    possible. A hit increases the score and a miss deducts the score by one. Only the clicks inside grid
-                    boundaries should be entertained. If a square is successfully hit, its colour should change to give
-                    user an indication of success.</li>
-                <li>Once the time is elapsed for all ten squares, replace the box number at the top with the ‘finished’
-                    label.</li>
-                </br>
-                <li>Language used: PYTHON.</li>
+                <span id="dots">...</span>
+                <span id="more">
+                    <li>Implement the gameplay, which includes displaying ten squares on the grid one after the other.
+                        Display the current square number (1 to 10) at the top. Each square should occupy a random box
+                        on
+                        the grid. A square would only stay on screen for a period of 2, 1.5 or 1 seconds, corresponding
+                        to
+                        difficulty levels of 1, 2 and 3 respectively.</li>
+                    <li>Let the user play the game with mouse. Objective of the game is to shoot (click) as many squares
+                        as
+                        possible. A hit increases the score and a miss deducts the score by one. Only the clicks inside
+                        grid
+                        boundaries should be entertained. If a square is successfully hit, its colour should change to
+                        give
+                        user an indication of success.</li>
+                    <li>Once the time is elapsed for all ten squares, replace the box number at the top with the
+                        ‘finished’
+                        label.</li>
+                    </br>
+                    <li>Language used: PYTHON.</li>
+                </span>
+            </br> </br>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
             </h3>
         </div>
+
         <div id="videoBox">
             <img src="/images/Square Hunt Game.gif" />
         </div>
-
-
-
 
     </div>
 
 
 </body>
+
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
 
 </html>
