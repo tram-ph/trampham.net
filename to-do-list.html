@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To do list</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Home header */
+
+        h1 {
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 0.8rem;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #homeDiv {
+            display: flex;
+            justify-content: flex-end;
+            width: 90%;
+            margin: 0 auto;
+            text-align: right;
+            border-bottom: 1px solid #bfbfbf;
+
+        }
+
+        /* Body Styling */
+
+        /* title */
+        h2 {
+            font-family: Comfortaa;
+            font-weight: 600;
+            font-size: 3.2rem;
+            color: #222;
+        }
+
+        h3 {
+            font-family: Comfortaa;
+            font-weight: normal;
+            font-size: 1.5rem;
+            color: #888;
+        }
+
+        #toDoList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #toDoTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #toDoField {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 3rem;
+        }
+
+        #styleForm {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #taskInput {
+            height: 2rem;
+            min-width: 20rem;
+            font-family: Comfortaa;
+            font-weight: normal;
+            font-size: 1.5rem;
+            color: #222;
+            border: none;
+            border-bottom: 2px solid #999;
+        }
+
+        /* Task list  */
+        h4 {
+            font-family: Comfortaa;
+            font-weight: 600;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            color: #222;
+        }
+
+        #taskList {
+            padding-top: 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #userEntry {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #newParaId {
+            display: inline-flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        #taskCheckBox {
+            height: 2rem;
+            width: 2rem;
+            cursor: pointer;
+        }
+
+        #savedTask {
+            font-family: Comfortaa;
+            font-weight: normal;
+            font-size: 1.3rem;
+            color: #222;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        #delLink {
+            font-family: Comfortaa;
+            font-weight: normal;
+            font-size: 1.3rem;
+            color: #E74C3C;
+        }
+
+        #delLink:hover {
+            color: #e9c46a;
+        }
+
+        /* Button styling */
+
+        #saveBtn {
+            height: 3rem;
+            width: 13rem;
+            position: relative;
+            padding: 10px;
+            margin: 0px 10px 10px 0px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            display: inline-block;
+            font-family: Comfortaa;
+            font-size: 1.2rem;
+            color: #FFF;
+            text-decoration: none;
+            transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            background-color: #E74C3C;
+            border-bottom: 7px solid #BD3E31;
+            text-shadow: 0px -2px #444;
+        }
+
+        #saveBtn:active {
+            transform: translate(0px, 5px);
+            -webkit-transform: translate(0px, 5px);
+            color: #FFF;
+            border-bottom: 1px solid;
+        }
+
+        #addBtn {
+            height: 3rem;
+            width: 5rem;
+            position: relative;
+            padding: 10px;
+            margin: 0px 10px 10px 0px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            display: inline-block;
+            font-family: Comfortaa;
+            font-size: 1.2rem;
+            color: #FFF;
+            text-decoration: none;
+            transition: all 0.1s;
+            -webkit-transition: all 0.1s;
+            background-color: #E74C3C;
+            border-bottom: 7px solid #BD3E31;
+            text-shadow: 0px -2px #444;
+            transform: translateX(2.5rem);
+        }
+
+        #addBtn:active {
+            transform: translate(0px, 5px);
+            -webkit-transform: translate(0px, 5px);
+            color: #FFF;
+            border-bottom: 1px solid;
+            transform: translateX(2.5rem) translateY(5px);
+        }
+
+
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            #homeDiv {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+
+            h2 {
+                font-size: 4.5rem;
+                padding-top: 4rem;
+            }
+
+            #taskInput {
+                height: 4rem;
+                width: 30rem;
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 3rem;
+            }
+
+            #addBtn {
+                height: 4rem;
+                width: 8rem;
+                font-size: 2rem;
+                border-bottom: 10px solid #BD3E31;
+            }
+
+            #saveBtn {
+                height: 4rem;
+                width: 15rem;
+                font-size: 2rem;
+                border-bottom: 10px solid #BD3E31;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Home Header -->
+
+    <div id="homeDiv">
+        <h1><a href='https://trampham.net'>_PORTFOLIO</a></h1>
+        <h1><a href='https://trampham.net'>_RESUME</a></h1>
+        <h1><a href='https://trampham.net/contact.html'>_CONTACT</a></h1>
+    </div>
+
+
+    <!-- Check box, text box-->
+    <div id="toDoList">
+
+        <!-- Title -->
+        <div id="toDoTitle">
+            <h2>TO DO LIST</h2>
+        </div>
+
+        <!-- Task Input Field -->
+        <div id="toDoField">
+            <form>
+                <div id="styleForm">
+                    <p><input type="text" id="taskInput" placeholder="Enter your task here"></p>
+                    <button type="button" id="addBtn">Add</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Task List-->
+    <div id="taskList">
+        <div>
+            <h4>TASK LIST</h4>
+            <span><button type="button" id="saveBtn">Save tasks</button></span>
+        </div>
+        <div id="userEntry"></div>
+    </div>
+
+</body>
+<script>
+    document.getElementById("addBtn").addEventListener("click", myFunction);
+
+    // Checkbox + Delete + Saved Tasks //
+    function myFunction() {
+        const newPara = document.createElement("p");
+        newPara.setAttribute("id", "newParaId");
+
+        const newInput = document.createElement("input");
+        newInput.setAttribute("type", "checkbox");
+        newInput.setAttribute("id", "taskCheckBox");
+
+        newInput.addEventListener("change", boxFunction);
+        newPara.appendChild(newInput);
+
+        const newPara1 = document.createElement("p");
+        newPara1.setAttribute("id", "savedTask");
+
+
+        // Get task input's value //
+        newPara1.innerHTML = document.getElementById("taskInput").value;
+        newPara.appendChild(newPara1);
+
+        const newLink = document.createElement("a");
+        newLink.setAttribute("id", "delLink");
+        newLink.addEventListener("click", delFunction);
+
+        const delText = document.createTextNode("Delete");
+        newLink.appendChild(delText);
+        newLink.href = "#";
+
+
+        newPara.appendChild(newLink);
+
+        document.getElementById("userEntry").appendChild(newPara);
+    }
+
+    // If box is checked, text will be cross over//
+    function boxFunction(e) {
+        if (e.target.checked == true) {
+            e.target.nextElementSibling.style.textDecoration = "line-through";
+        } else {
+            e.target.nextElementSibling.style.textDecoration = "none";
+        }
+    }
+
+    // Delete button will cease element//
+    function delFunction(d) {
+        d.target.parentElement.remove();
+    }
+</script>
+
+</html>
